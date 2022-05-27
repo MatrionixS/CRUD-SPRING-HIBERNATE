@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+
+<a th:text="${person.name + ', ' + person.age}">user</a>
+<br/>
+<hr/>
+<form th:method="GET" th:action="@{/{id}/edit(id=${person.id})}">
+    <input type="submit" value="Edit"/>
+</form>
+<br/>
+<form th:method="DELETE" th:action="@{/{id}/delete(id=${person.id})}">
+    <input type="submit" value="Delete"/>
+</form>
+</body>
+</html>
